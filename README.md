@@ -1,7 +1,7 @@
 # README
 
-- Написать “​парсер” для новостного сайта ​https://news.ycombinator.com/​
-“парсер” ​должен запускаться как rake задача, и обрабатывать первые 5 страниц информации(​плюсом будет использование Sidekiq).
+- Написать “​парсер” для новостного сайта ​https://news.ycombinator.com/
+“парсер” ​должен запускаться как rake задача, и обрабатывать первые 5 страниц информации(​плюсом будет использование Sidekiq)
 
             Обязательные поля:
 
@@ -16,12 +16,12 @@
 - Написать API для получение новостей
 
 GET​
- /api/posts
+  /api/posts
 [
   { title: ‘Article’,   url: ‘http://test.com’, author: ‘Jim’ },
   { title: ‘Article­2’, url: ‘http://test­2.com‘, author: ‘JO’ }
 ]
 
 GET​
- /api/posts/:post_id
-{ title: ‘Article’, url: ‘http://test.com’, author: ‘JO’ }
+  /api/posts/:post_id
+  { title: ‘Article’, url: ‘http://test.com’, author: ‘JO’ }
