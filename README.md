@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Написать “​парсер” для новостного сайта ​https://news.ycombinator.com/​
+“парсер” ​должен запускаться как rake задача, и обрабатывать первые 5 страниц информации(​плюсом будет использование Sidekiq).
 
-Things you may want to cover:
+            Обязательные поля:
 
-* Ruby version
+        title ­ название статьи
+        autor ­ автор статьи
+        url   ­ адрес статьи
 
-* System dependencies
 
-* Configuration
 
-* Database creation
+- Написать WEB­версию для отображения новостей(​плюсом будет добавление стилей и пагинации ) ​
 
-* Database initialization
+- Написать API для получение новостей
 
-* How to run the test suite
+GET​
+ /api/posts
+[
+  { title: ‘Article’,   url: ‘http://test.com’, author: ‘Jim’ },
+  { title: ‘Article­2’, url: ‘http://test­2.com‘, author: ‘JO’ }
+]
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+GET​
+ /api/posts/:post_id
+{ title: ‘Article’, url: ‘http://test.com’, author: ‘JO’ }
