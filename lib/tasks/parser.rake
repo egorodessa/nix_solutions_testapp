@@ -1,10 +1,3 @@
-#     require 'rubygems'
-# require 'nokogiri'
-# require 'open-uri'
-require 'mechanize'
-# require 'pry'
-
-
 namespace :parser do
   desc "TODO"
   task threepages_of_Hacker_news: :environment do
