@@ -15,27 +15,27 @@ namespace :parser do
 
     mainpage.get(base_url)
 
+    Post.delete_all
 
-    @results = []
-    items_list = mainpage.page.search('.itemlist')
+    3.times do
 
-    items_list.search('.athing').map do |item|
-      # binding.pry
-      post = item.search('td.title')[1].children[0]
+      items_list = mainpage.page.search('.itemlist')
 
-      link = post.attributes['href'].value
-      title = post.children.text
-      author = item.next.search('.hnuser')[0].children.text
+      items_list.search('.athing').map do |item|
 
-      puts title
-      puts link
-      puts author
-      puts " "
+        record = item.search('td.title')[1].children[0]
+
+        @news = Post.new
+        @news.url = record.attributes['href'].value
+        @news.title = record.children.text
+        @news.author = item.next.search('.hnuser')[0].children.text unless item.next.search('.hnuser')[0].nil?
+
+        @news.save
+      end
+
+      mainpage.page.link_with(text: 'More').click
 
     end
-
-    # render :index
-
 
   end
 
