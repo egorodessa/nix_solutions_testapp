@@ -1,6 +1,6 @@
 namespace :parser do
   desc "TODO"
-  task threepages_of_Hacker_news: :environment do
+  task fivepages_of_Hacker_news: :environment do
 
     base_url = 'https://news.ycombinator.com/'
 
@@ -10,7 +10,7 @@ namespace :parser do
 
     Post.delete_all
 
-    3.times do
+    5.times do
 
       items_list = mainpage.page.search('.itemlist')
 

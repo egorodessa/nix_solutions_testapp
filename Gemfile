@@ -7,6 +7,7 @@ end
 
 gem 'mechanize'
 gem 'pry'
+gem 'kaminari'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
