@@ -25,3 +25,7 @@ GET​
 GET​
   /api/posts/:post_id
   { title: ‘Article’, url: ‘http://test.com’, author: ‘JO’ }
+
+
+
+ps: need to run /lib/tasks/parser.rake before start
