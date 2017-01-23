@@ -9,7 +9,6 @@ gem 'mechanize'
 gem 'pry'
 gem 'kaminari'
 gem 'sidekiq'
-
 gem "sidekiq-cron", "~> 0.4.0"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
