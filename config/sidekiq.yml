@@ -1,0 +1,3 @@
+PageParser:
+  cron: "*/5 * * * * * "
+  class: "PageParserWorker"
