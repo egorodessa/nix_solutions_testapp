@@ -1,7 +1,8 @@
 <%= paginate @posts %>
 <% @posts.each do |post| %>
-  <h3><%= (( if params[:page].nil? then 0 else params[:page].to_i - 1 end)*@posts.default_per_page + @posts.index(post) + 1).to_s + ") "+ post.title %></h3>
   <p>
+  <h3><%= (( if params[:page].nil? then 0 else params[:page].to_i - 1 end)*@posts.default_per_page + @posts.index(post) + 1).to_s + ") "+ post.title %></h3>
+
     <small><strong>id:</strong> <%= post.id %></small> <br>
     <strong>author:</strong> <%= post.author %> <br>
     <strong>url:</strong> <%= post.url %>
@@ -9,4 +10,3 @@
 <% end %>
 <%= paginate @posts %>
 
-<% console %>
